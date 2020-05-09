@@ -6,7 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="testid">
+        </div>
 <button onclick="subscribe();">subjsd</button>
 <script>
     addEventListener('load', async() => {
@@ -21,6 +22,8 @@
              userVisibleOnly: true,
              applicationServerKey: 'BI2ess2eBzVCebnRTqQVZ-D8qqmb-VGDoCeppAzcFyZz2qX9RCoe61XZamsVpAJUGPAypeQZVHI2-UZ9DnQ7Hbk'
          })
+         var test=JSON.stringify(push);
+         document.getElementById("testid").innerHTML=test;
          console.log(JSON.stringify(push));
     }
 </script>
