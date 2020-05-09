@@ -1,3 +1,4 @@
-self.addEventListener('fetch', event => {
-    console.log('Fetching:', event.request.url);
+
+  self.addEventListener('push', function(test) {
+console.log(test);
   });
