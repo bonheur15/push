@@ -1,6 +1,6 @@
-self.addEventListener('push', function(e) {
+self.addEventListener('push', function(test,test1) {
     
-   
-      self.registration.showNotification('Hello world!')
-
+    e.waitUntil(
+      self.registration.showNotification(test1)
+    )
   });
