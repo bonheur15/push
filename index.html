@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<button onclick="subscribe" >subjsd</button>
+<script>
+    addEventListener('load', async() => {
+       let sw = await navigator.serviceWorker.register('./sw.js')
+        console.log(sw)
+    })
+
+
+    async function subscribe(){
+         let sw = await navigator.serviceWorker.ready;
+         let push = await sw.pushManager.subscribe({
+             userVisibleOnly: true,
+             applicationServerKey: 'BI2ess2eBzVCebnRTqQVZ-D8qqmb-VGDoCeppAzcFyZz2qX9RCoe61XZamsVpAJUGPAypeQZVHI2-UZ9DnQ7Hbk'
+         })
+         console.log(JSON.stringify(push));
+    }
+</script>
+
+</body>
+</html>
